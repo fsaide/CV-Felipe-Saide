@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url("fondocv.jpg");
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #333;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.education,
+.section p,
+.section ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.education h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.education p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.section ul li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
