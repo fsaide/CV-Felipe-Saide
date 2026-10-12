@@ -56,48 +56,26 @@ body {
     animation: title-in 800ms 120ms ease both;
 }
 
-.download-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-    padding: 8px 13px;
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 220ms ease, color 220ms ease;
-}
-
-.download-button:hover,
-.download-button:focus-visible {
-    background-color: #fff;
-    color: #233e63;
-}
-
 .profile-picture {
     position: absolute;
     z-index: 1;
     left: 65px;
     bottom: -125px;
     width: 300px;
-    height: 270px;
-    padding: 10px;
+    height: 300px;
+    padding: 5px;
     background: #fff;
+    box-shadow: 0 8px 20px rgba(9, 40, 91, 0.22);
 }
 
 .profile-picture img {
     width: 100%;
     height: 100%;
     border-radius: 0;
-    object-fit: cover;
+    object-fit: contain;
     border: 0;
-    transition: transform 450ms ease;
-}
-
-.profile-picture:hover img {
-    transform: scale(1.035);
+    transform: none;
+    transition: none;
 }
 
 .cv-body {
@@ -118,6 +96,7 @@ body {
 }
 
 .contact-info h2,
+.sidebar-downloads h2,
 .section h2 {
     font-family: "Space Grotesk", sans-serif;
     margin: 0 0 18px;
@@ -129,6 +108,10 @@ body {
 
 .contact-info h2 {
     margin-bottom: 16px;
+}
+
+.sidebar-downloads h2 {
+    margin-bottom: 12px;
 }
 
 .contact-info a,
@@ -172,6 +155,61 @@ body {
 .section {
     margin-bottom: 28px;
     scroll-margin-top: 28px;
+}
+
+.sidebar-downloads {
+    margin-top: 26px;
+}
+
+.cv-download-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cv-download-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    gap: 4px;
+}
+
+.cv-download-type {
+    color: #52657e;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.cv-download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 0;
+    border-bottom: 1px solid rgba(35, 62, 99, 0.45);
+    color: #233e63;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 180ms ease, border-color 180ms ease;
+}
+
+.cv-download-link:hover,
+.cv-download-link:focus-visible {
+    border-color: #355d91;
+    color: #355d91;
+}
+
+.sidebar-downloads .cv-download-note {
+    margin-top: 10px;
+    color: #263f63;
+    font-size: 12px;
+    line-height: 1.45;
 }
 
 .section h2 {
@@ -297,6 +335,10 @@ body.js .sidebar.is-visible {
         letter-spacing: 1px;
     }
 
+    .cv-version-description {
+        font-size: 12px;
+    }
+
     .download-button {
         margin-top: 12px;
     }
@@ -306,7 +348,7 @@ body.js .sidebar.is-visible {
         top: 25px;
         bottom: auto;
         width: 195px;
-        height: 175px;
+        height: 195px;
     }
 
     .cv-body {
@@ -328,6 +370,10 @@ body.js .sidebar.is-visible {
 
     .section h2 {
         font-size: 25px;
+    }
+
+    .cv-download-list {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -384,7 +430,4 @@ body.js .sidebar.is-visible {
         animation: none;
     }
 
-    .download-button {
-        display: none;
-    }
 }
